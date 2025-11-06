@@ -48,21 +48,6 @@ function TeacherLayout() {
   );
 }
 
-// ====================== Temporary Dashboards ======================
-const TeacherDashboard = () => (
-  <div style={{ textAlign: "center", marginTop: "2rem" }}>
-    <h2>Teacher Dashboard</h2>
-    <p>Welcome, Teacher! Your dashboard is under development.</p>
-  </div>
-);
-
-const StudentDashboard = () => (
-  <div style={{ textAlign: "center", marginTop: "2rem" }}>
-    <h2>Student Dashboard</h2>
-    <p>Welcome, Student! Your main dashboard is under development.</p>
-  </div>
-);
-
 // ====================== Main App ======================
 export default function App() {
   return (
@@ -93,20 +78,19 @@ export default function App() {
         />
 
         {/* ---------------- STUDENT ROUTES ---------------- */}
-        <Route path="/student">
-          <Route
-            element={
-              <ProtectedRoute requiredRole="student">
-                <StudentLayout />
-              </ProtectedRoute>
-            }
-          >
-            <Route index element={<StudentDashboard />} />
-            <Route path="overview" element={<Overview />} />
-            <Route path="checkin-checkout" element={<CheckInCheckOut />} />
-            <Route path="qrscan" element={<QrScan />} />
-            <Route path="attendance" element={<Attendance />} />
-          </Route>
+        <Route
+          path="/student"
+          element={
+            <ProtectedRoute requiredRole="student">
+              <StudentLayout />
+            </ProtectedRoute>
+          }
+        >
+          <Route index element={<Overview />} />
+          <Route path="overview" element={<Overview />} />
+          <Route path="checkin-checkout" element={<CheckInCheckOut />} />
+          <Route path="qrscan" element={<QrScan />} />
+          <Route path="attendance" element={<Attendance />} />
         </Route>
 
         {/* ---------------- FALLBACK ---------------- */}
@@ -115,4 +99,3 @@ export default function App() {
     </BrowserRouter>
   );
 }
-
