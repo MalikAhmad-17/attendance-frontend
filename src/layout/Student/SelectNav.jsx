@@ -4,7 +4,7 @@ import { FiHome, FiClock, FiGrid, FiCalendar } from "react-icons/fi";
 
 const navItems = [
   { name: "Overview", to: "overview", Icon: FiHome },
-  { name: "Check In/Out", to: "checkin-checkout", Icon: FiClock },
+/*   { name: "Check In/Out", to: "checkin-checkout", Icon: FiClock }, */
   { name: "QR Scan", to: "qrscan", Icon: FiGrid },
   { name: "My Attendance", to: "attendance", Icon: FiCalendar },
 ];

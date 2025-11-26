@@ -89,7 +89,6 @@ export default function App() {
         >
           <Route index element={<Overview />} />
           <Route path="overview" element={<Overview />} />
-          <Route path="checkin-checkout" element={<CheckInCheckOut />} />
           <Route path="qrscan" element={<QrScan />} />
           <Route path="attendance" element={<Attendance />} />
         </Route>

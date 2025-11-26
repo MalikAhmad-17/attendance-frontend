@@ -137,29 +137,32 @@ const MarkAttendance = () => {
               </span>
             </td>
             <td className="py-3 px-5 text-center">
-              <div className="flex justify-center gap-2">
-                <button
-                  onClick={() => markAttendance(student.id, "Present")}
-                  className="p-2 rounded-lg border border-gray-300 hover:bg-black hover:text-white transition"
-                  title="Mark Present"
-                >
-                  <CircleCheck className="w-4 h-4" />
-                </button>
-                <button
-                  onClick={() => markAttendance(student.id, "Late")}
-                  className="p-2 rounded-lg border border-gray-300 hover:bg-gray-200 transition"
-                  title="Mark Late"
-                >
-                  <Clock className="w-4 h-4" />
-                </button>
-                <button
-                  onClick={() => markAttendance(student.id, "Absent")}
-                  className="p-2 rounded-lg border border-gray-300 hover:bg-red-500 hover:text-white transition"
-                  title="Mark Absent"
-                >
-                  <CircleX className="w-4 h-4" />
-                </button>
-              </div>
+          <div className="flex justify-center gap-2">
+  <button
+    onClick={() => markAttendance(student.id, "Present")}
+    className="p-2 rounded-lg border border-green-600 bg-green-500 text-white hover:bg-green-700 transition"
+    title="Mark Present"
+  >
+    <CircleCheck className="w-4 h-4" />
+  </button>
+
+  <button
+    onClick={() => markAttendance(student.id, "Late")}
+    className="p-2 rounded-lg border border-yellow-500 bg-yellow-400 text-black hover:bg-yellow-600 hover:text-white transition"
+    title="Mark Late"
+  >
+    <Clock className="w-4 h-4" />
+  </button>
+
+  <button
+    onClick={() => markAttendance(student.id, "Absent")}
+    className="p-2 rounded-lg border border-red-600 bg-red-500 text-white hover:bg-red-700 transition"
+    title="Mark Absent"
+  >
+    <CircleX className="w-4 h-4" />
+  </button>
+</div>
+
             </td>
           </tr>
         ))}
